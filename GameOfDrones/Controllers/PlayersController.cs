@@ -15,7 +15,12 @@ namespace GameOfDrones.Controllers
 {
     public class PlayersController : ApiController
     {
-        private GameOfDronesContext db = new GameOfDronesContext();
+        private GameOfDronesContext db { get; set; }
+
+        public PlayersController()
+        {
+            db = new GameOfDronesContext();
+        }
 
         // GET: api/Players
         public IQueryable<Player> GetPlayers()

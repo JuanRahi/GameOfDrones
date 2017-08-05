@@ -10,13 +10,19 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using GameOfDrones.Domain.DAL;
 using GameOfDrones.Domain.Entities;
+using GameOfDrones.Shared.DTO;
 
 namespace GameOfDrones.Controllers
 {
     public class GamesController : ApiController
     {
-        private GameOfDronesContext db = new GameOfDronesContext();
+        private GameOfDronesContext db { get; set; }
 
+        public GamesController()
+        {
+            db = new GameOfDronesContext();
+        }
+        
         // GET: api/Games
         public IQueryable<Game> GetGames()
         {
@@ -73,17 +79,34 @@ namespace GameOfDrones.Controllers
 
         // POST: api/Games
         [ResponseType(typeof(Game))]
-        public IHttpActionResult PostGame(Game game)
+        public IHttpActionResult PostGame(GameDTO game)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Games.Add(game);
+            var newGame = db.Games.Add(new Game());
+
+            var player1 = db.Players.Where(x => x.Nombre == game.Player1).FirstOrDefault();
+            if (player1 == null)
+                player1 = db.Players.Add(new Player { Nombre = game.Player1 });                
+
+            var score1 = db.Scores.Add(new Score { Game = newGame, Player = player1 });
+
+            var player2 = db.Players.Where(x => x.Nombre == game.Player2).FirstOrDefault();
+            if (player2 == null)
+                player2 = db.Players.Add(new Player { Nombre = game.Player2 });                
+            
+            var score2 = db.Scores.Add(new Score { Game = newGame, Player = player2 });
+
+            //newGame.Scores.Add(score1);
+            //newGame.Scores.Add(score2);
+
+            db.Games.Add(newGame);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = game.ID }, game);
+            return CreatedAtRoute("DefaultApi", new { id = newGame.ID }, newGame);
         }
 
         // DELETE: api/Games/5

@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameOfDrones.Domain.Entities
+namespace GameOfDrones.Shared.DTO
 {
-    public class Round
+    public class GameDTO
     {
-        public int ID { get; set; }
         [Required]
-        public virtual Game Game { get; set; }
-        public virtual Player Winner { get; set; }
+        public string Player1 { get; set; }
+        [Required]
+        public string Player2 { get; set; }
     }
 }

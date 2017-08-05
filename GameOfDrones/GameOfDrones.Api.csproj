@@ -52,11 +52,19 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -291,6 +299,10 @@
     <ProjectReference Include="..\GameOfDrones.Domain\GameOfDrones.Domain.csproj">
       <Project>{cff238a1-3d65-4192-b8de-1ab47d4d955f}</Project>
       <Name>GameOfDrones.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameOfDrones.Shared\GameOfDrones.Shared.csproj">
+      <Project>{48a7149f-258a-4cea-b144-5c291b7810d4}</Project>
+      <Name>GameOfDrones.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
