@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\Services\gameService.js" />
+    <Content Include="Scripts\Services\roundFactory.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -859,8 +860,10 @@
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
     <Content Include="Views\Game\Index.html" />
     <Content Include="Views\Game\Move.html" />
+    <Content Include="Views\Game\Play.html" />
     <Content Include="Views\Game\Start.html" />
     <Content Include="Home.html" />
+    <Content Include="Views\Game\Winner.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿var app = angular.module("game", ['ngRoute', 'ngResource', 'gameService']);
+﻿var app = angular.module("game", ['ngRoute', 'ngResource', 'gameService', 'roundFactory']);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider',
       function ($routeProvider, $locationProvider, $httpProvider) {
@@ -12,6 +12,14 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
             })
             .when('/Games', {
                 templateUrl: 'Views/Game/Index.html',
+                controller: 'GameCtrl'
+            })
+            .when('/Play/:id', {
+                templateUrl: 'Views/Game/Play.html',
+                controller: 'GameCtrl'
+            })
+            .when('/Winner', {
+                templateUrl: 'Views/Game/Winner.html',
                 controller: 'GameCtrl'
             })
             .otherwise({

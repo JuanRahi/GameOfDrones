@@ -1,6 +1,6 @@
 ﻿<h2>Games</h2>
 <div ng-init="init()">
     <div ng-repeat="game in games">
-        {{game.ID}} - {{game}}
+        <a href="/Play/{{game.ID}}">{{game}}</a>
     </div>
 </div>

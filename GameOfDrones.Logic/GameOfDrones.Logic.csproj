@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Controllers\GameCtrl.cs" />
     <Compile Include="Controllers\PlayerCtrl.cs" />
+    <Compile Include="Controllers\RoundCtrl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

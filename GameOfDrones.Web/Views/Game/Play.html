@@ -1,0 +1,27 @@
+﻿<div ng-init="round()">
+    <h1>Round {{game.Rounds}}</h1>
+    {{turn}}
+    <form method="post" name="round" ng-submit="nextRound()">
+        <input type="hidden" name="game" ng-model="game.ID">
+        <div ng-if="turn == 1">            
+            <label>{{game.Player1.Name}}</label>
+            <input type="hidden" name="player1" ng-model="game.Player1.ID">
+            <select ng-model="game.Player1.Play">
+                <option value="2">Rock</option>
+                <option value="0">Paper</option>
+                <option value="1">Scissors</option>
+            </select>
+            <input type="button" value="Ok" ng-click="play()" />           
+        </div>
+        <div ng-if="turn == 2">            
+            <label>{{game.Player2.Name}}</label>
+            <input type="hidden" name="player2" ng-model="game.Player2.ID">
+            <select ng-model="game.Player2.Play">
+                <option value="2">Rock</option>
+                <option value="0">Paper</option>
+                <option value="1">Scissors</option>
+            </select>
+            <input type="submit" value="Ok" />
+        </div>        
+    </form>
+</div>

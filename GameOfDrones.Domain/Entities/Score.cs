@@ -9,13 +9,9 @@ namespace GameOfDrones.Domain.Entities
 {
     public class Score
     {
-        public Score()
-        {
-
-        }
-
         public int ID { get; set; }
         public int PlayerId { get; set; }
+        public int GameId { get; set; }
         public int Wins { get; set; }
 
         [Required]

@@ -11,8 +11,6 @@ namespace GameOfDrones.Domain.Entities
     {
         public Game()
         {
-            //Scores = new List<Score>();
-            //Rounds = new List<Round>();
             Date = DateTime.Now;           
         }
 

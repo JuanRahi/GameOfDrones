@@ -36,6 +36,17 @@ namespace GameOfDrones.Logic.Controllers
             return result;
         }
 
+        public PlayerDTO Get(int id)
+        {
+            var player = repPlayers.Get(x => x.ID == id);
+            PlayerDTO dto = new PlayerDTO
+            {                
+                ID = player.ID,
+                Name = player.Name
+            };
+            return dto;
+        }
+
         public int Add(PlayerDTO dto)
         {
             return Add(dto.Name);

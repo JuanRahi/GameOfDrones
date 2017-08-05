@@ -21,7 +21,7 @@ namespace GameOfDrones.Controllers
         {
             controller = new GameCtrl();
         }
-        
+
         // GET: api/Games
         public IEnumerable<GameDTO> GetGames()
         {
@@ -29,21 +29,20 @@ namespace GameOfDrones.Controllers
         }
 
         // GET: api/Games/5
-        [ResponseType(typeof(GameDTO))]
+        [ResponseType(typeof(FullGameDTO))]
         public IHttpActionResult GetGame(int id)
         {
-            GameDTO game = controller.Get(id);
+            FullGameDTO game = controller.GetFull(id);
             if (game == null)
             {
                 return NotFound();
             }
 
-            return Ok(game);
+            return Ok(new { game = game });
         }
 
 
-        // POST: api/Games
-        [ResponseType(typeof(GameDTO))]
+        // POST: api/Games        
         public IHttpActionResult PostGame(GameDTO game)
         {
             if (!ModelState.IsValid)
@@ -51,11 +50,14 @@ namespace GameOfDrones.Controllers
                 return BadRequest(ModelState);
             }
 
-            controller.Add(game);     
+            var id = controller.Add(game);
 
-            return CreatedAtRoute("DefaultApi", new { id = game.ID }, game);
+            return Ok(new
+            {
+                game = id
+            });
         }
-
+      
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
