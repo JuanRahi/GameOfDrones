@@ -2,8 +2,8 @@
     'use strict';
 
     var base_url = 'http://localhost:57464/api/Games';
-    var GameService = angular.module('gameFactory', ['ngResource']);
-    GameService.factory('GamesFactory', function ($resource) {
+    var GameFactory = angular.module('gameFactory', ['ngResource']);
+    GameFactory.factory('GamesFactory', function ($resource) {
         return {
             Insert: $resource(base_url, null, { go: { method: 'POST', params: { game: '@DataGame' } } }),
             Delete: $resource(base_url, null, { go: { method: 'DELETE', params: { id: '@id' } } }),

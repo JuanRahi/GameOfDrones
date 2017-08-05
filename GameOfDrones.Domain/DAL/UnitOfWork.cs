@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,17 @@ namespace GameOfDrones.Domain.DAL
 
         public void SaveChanges()
         {
-            context.SaveChanges();
+            try
+            {
+                context.SaveChanges();
+            }
+            catch(DbEntityValidationException ex)
+            {
+                var errors = ex.EntityValidationErrors;
+                var error1 = errors.FirstOrDefault().ValidationErrors.Select(x => new { x.PropertyName, x.ErrorMessage });
+            }
+
+            
         }
 
         private bool disposed = false;

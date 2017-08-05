@@ -1,6 +1,5 @@
 ﻿<div ng-init="round()">
-    <h1>Round {{game.Rounds}}</h1>
-    {{turn}}
+    <h1>Round {{game.Rounds}}</h1>    
     <form method="post" name="round" ng-submit="nextRound()">
         <input type="hidden" name="game" ng-model="game.ID">
         <div ng-if="turn == 1">            
@@ -11,7 +10,7 @@
                 <option value="0">Paper</option>
                 <option value="1">Scissors</option>
             </select>
-            <input type="button" value="Ok" ng-click="play()" />           
+            <input type="button" value="Ok" ng-click="play(2)" />           
         </div>
         <div ng-if="turn == 2">            
             <label>{{game.Player2.Name}}</label>

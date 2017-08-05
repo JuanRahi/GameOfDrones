@@ -110,6 +110,9 @@ namespace GameOfDrones.Logic.Controllers
 
             var score = repScores.Get(x => x.GameId == dto.ID && x.PlayerId == winner);
             score.Wins++;
+            repScores.Update(score);
+
+            uow.SaveChanges();
 
             return (score.Wins < 3); //Keep playing?
         }

@@ -11,10 +11,10 @@ namespace GameOfDrones.Domain.Entities
     {
         public int ID { get; set; }
 
+        [Required]
         public int GameId { get; set; }
         public int WinnerId { get; set; }
-
-        [Required]
+        
         public virtual Game Game { get; set; }
         public virtual Player Winner { get; set; }
     }
