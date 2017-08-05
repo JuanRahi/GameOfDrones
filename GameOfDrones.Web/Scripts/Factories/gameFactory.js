@@ -2,7 +2,7 @@
     'use strict';
 
     var base_url = 'http://localhost:57464/api/Games';
-    var GameService = angular.module('gameService', ['ngResource']);
+    var GameService = angular.module('gameFactory', ['ngResource']);
     GameService.factory('GamesFactory', function ($resource) {
         return {
             Insert: $resource(base_url, null, { go: { method: 'POST', params: { game: '@DataGame' } } }),

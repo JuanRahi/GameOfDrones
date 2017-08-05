@@ -1,4 +1,4 @@
-﻿var app = angular.module("game", ['ngRoute', 'ngResource', 'gameService', 'roundFactory']);
+﻿var app = angular.module("game", ['ngRoute', 'ngResource', 'gameFactory', 'roundFactory']);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider',
       function ($routeProvider, $locationProvider, $httpProvider) {
