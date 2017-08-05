@@ -1,0 +1,10 @@
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\bin\Debug\GameOfDrones.Domain.dll.config
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\bin\Debug\GameOfDrones.Domain.dll
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\bin\Debug\GameOfDrones.Domain.pdb
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\obj\Debug\GameOfDrones.Domain.dll
+C:\Users\Juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\obj\Debug\GameOfDrones.Domain.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\GameOfDrones\GameOfDrones.Domain\obj\Debug\GameOfDrones.Domain.csprojResolveAssemblyReference.cache

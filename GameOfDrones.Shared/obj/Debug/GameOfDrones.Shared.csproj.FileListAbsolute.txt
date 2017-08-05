@@ -1,0 +1,5 @@
+c:\users\juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Shared\bin\Debug\GameOfDrones.Shared.dll
+c:\users\juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Shared\bin\Debug\GameOfDrones.Shared.pdb
+c:\users\juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Shared\obj\Debug\GameOfDrones.Shared.dll
+c:\users\juan\documents\visual studio 2015\Projects\GameOfDrones\GameOfDrones.Shared\obj\Debug\GameOfDrones.Shared.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\GameOfDrones\GameOfDrones.Shared\obj\Debug\GameOfDrones.Shared.csprojResolveAssemblyReference.cache
