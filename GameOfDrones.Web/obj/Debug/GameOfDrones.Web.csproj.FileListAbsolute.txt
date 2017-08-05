@@ -35,6 +35,5 @@ C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Web\bin\GameOfDro
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Web\bin\GameOfDrones.Web.pdb
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Web\obj\Debug\GameOfDrones.Web.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Web\obj\Debug\GameOfDrones.Web.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Web\obj\Debug\GameOfDrones.Web.pdb

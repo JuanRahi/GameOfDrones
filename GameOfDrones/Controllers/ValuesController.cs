@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameOfDrones.Logic.Controllers;
+using GameOfDrones.Shared.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,13 +9,13 @@ using System.Web.Http;
 
 namespace GameOfDrones.Controllers
 {
-    [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<GameDTO> Get()
         {
-            return new string[] { "value1", "value2" };
+            GameCtrl controller = new GameCtrl();
+            return controller.GetAll();            
         }
 
         // GET api/values/5

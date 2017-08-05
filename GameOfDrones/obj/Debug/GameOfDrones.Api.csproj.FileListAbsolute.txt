@@ -95,7 +95,7 @@ C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\Antlr3.Runtime.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\EntityFramework.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\EntityFramework.SqlServer.dll
-C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Domain.dll
+C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Logic.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Shared.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\Microsoft.AspNet.Identity.EntityFramework.dll
@@ -127,7 +127,8 @@ C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\System.Web.We
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\System.Web.WebPages.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\System.Web.WebPages.Razor.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\WebGrease.dll
-C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Domain.pdb
+C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Domain.dll
+C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Logic.pdb
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Shared.pdb
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\System.Web.Http.Cors.xml
@@ -158,6 +159,7 @@ C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\Microsoft.Owi
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\System.Web.Http.Owin.xml
+C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.Domain.pdb
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\obj\Debug\GameOfDrones.Api.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\obj\Debug\GameOfDrones.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\obj\Debug\GameOfDrones.pdb

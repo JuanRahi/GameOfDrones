@@ -214,9 +214,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -268,7 +266,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -296,9 +296,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GameOfDrones.Domain\GameOfDrones.Domain.csproj">
-      <Project>{cff238a1-3d65-4192-b8de-1ab47d4d955f}</Project>
-      <Name>GameOfDrones.Domain</Name>
+    <ProjectReference Include="..\GameOfDrones.Logic\GameOfDrones.Logic.csproj">
+      <Project>{EBB65940-A9A3-43EA-8922-AD7E0EF6E3EA}</Project>
+      <Name>GameOfDrones.Logic</Name>
     </ProjectReference>
     <ProjectReference Include="..\GameOfDrones.Shared\GameOfDrones.Shared.csproj">
       <Project>{48a7149f-258a-4cea-b144-5c291b7810d4}</Project>
