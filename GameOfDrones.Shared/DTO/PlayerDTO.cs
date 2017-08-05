@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameOfDrones.Domain.Entities
+namespace GameOfDrones.Shared.DTO
 {
-    public class Player
-    {         
+    public class PlayerDTO
+    {
         public int ID { get; set; }
-        [Required]
         public string Name { get; set; }
-
-        public virtual List<Score> Scores { get; set; }
     }
 }

@@ -9,9 +9,12 @@ namespace GameOfDrones.Shared.DTO
 {
     public class GameDTO
     {
+        public int ID { get; set; }
+        public DateTime? Date { get; set; }
         [Required]
         public string Player1 { get; set; }
         [Required]
         public string Player2 { get; set; }
+        
     }
 }
