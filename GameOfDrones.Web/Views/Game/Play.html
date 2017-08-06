@@ -1,5 +1,5 @@
 ﻿<div ng-init="round()">
-    <div class="col-md-6" ng-show="game.EndDate == null">
+    <div class="col-md-6 col-xs-12" ng-show="game.EndDate == null">
         <h1>Round {{game.TotalRounds}}</h1>
         <form method="post" name="round" ng-submit="nextRound()" class="form-horizontal">
             <input type="hidden" name="game" ng-model="game.ID">
@@ -31,7 +31,7 @@
             </div>
         </form>
     </div>
-    <div class="col-md-6" ng-show="game.Rounds.length > 0" class="table-responsive">
+    <div class="col-md-6 col-xs-12" ng-show="game.Rounds.length > 0" class="table-responsive">
         <h1>Score</h1>
         <table class="table table-bordered">            
             <thead>

@@ -1,0 +1,13 @@
+﻿html,
+body {
+    height: 100%;
+}
+
+.container-table {
+    height: 100%;
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
