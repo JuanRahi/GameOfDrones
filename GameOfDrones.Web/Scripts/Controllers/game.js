@@ -1,5 +1,5 @@
-﻿angular.module("game").controller('GameCtrl', ['$scope', '$location', '$routeParams', 'GamesFactory', 'RoundsFactory',
-    function ($scope, $location, $routeParams, GamesFactory, RoundsFactory) {
+﻿angular.module("game").controller('GameCtrl', ['$scope', '$location', '$routeParams', 'toastr', 'GamesFactory', 'RoundsFactory',
+    function ($scope, $location, $routeParams, toastr, GamesFactory, RoundsFactory) {
 
         $scope.winner = $routeParams.winner;
         
@@ -42,7 +42,7 @@
                 });            
             }
             else {
-                alert("tie");
+                toastr.warning("Tie!");
                 $scope.turn = 1;
             }
         };        
