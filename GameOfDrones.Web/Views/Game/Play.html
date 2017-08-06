@@ -1,42 +1,49 @@
 ﻿<div ng-init="round()">
-    <div ng-show="game.EndDate == null">
-        {{game.EndDate}}
+    <div class="col-md-6" ng-show="game.EndDate == null">
         <h1>Round {{game.TotalRounds}}</h1>
-        <form method="post" name="round" ng-submit="nextRound()">
+        <form method="post" name="round" ng-submit="nextRound()" class="form-horizontal">
             <input type="hidden" name="game" ng-model="game.ID">
             <div ng-if="turn == 1">
-                <label>{{game.Player1.Name}}</label>
-                <input type="hidden" name="player1" ng-model="game.Player1.ID">
-                <select ng-model="game.Player1.Play">
-                    <option value="2">Rock</option>
-                    <option value="0">Paper</option>
-                    <option value="1">Scissors</option>
-                </select>
-                <input type="button" value="Ok" ng-click="play(2)" />
+                <div class="form-group">
+                    <h2>{{game.Player1.Name}}</h2>
+                    <input type="hidden" name="player1" ng-model="game.Player1.ID">
+                    <label for=""></label>
+                    <select ng-model="game.Player1.Play" class="form-control" name="play1">
+                        <option value="2">Rock</option>
+                        <option value="0">Paper</option>
+                        <option value="1">Scissors</option>
+                    </select>
+                </div>                
+                <input type="button" value="Ok" class="btn btn-primary" ng-click="play(2)" />
             </div>
             <div ng-if="turn == 2">
-                <label>{{game.Player2.Name}}</label>
-                <input type="hidden" name="player2" ng-model="game.Player2.ID">
-                <select ng-model="game.Player2.Play">
-                    <option value="2">Rock</option>
-                    <option value="0">Paper</option>
-                    <option value="1">Scissors</option>
-                </select>
-                <input type="submit" value="Ok" />
+                <div class="form-group">
+                    <h2>{{game.Player2.Name}}</h2>
+                    <input type="hidden" name="player2" ng-model="game.Player2.ID">
+                    <label for="play2"></label>
+                    <select ng-model="game.Player2.Play" class="form-control" name="play2">
+                        <option value="2">Rock</option>
+                        <option value="0">Paper</option>
+                        <option value="1">Scissors</option>
+                    </select>
+                </div>               
+                <input type="submit" class="btn btn-primary" value="Ok" />
             </div>
         </form>
     </div>
-    <table>
-       <thead>
-           <tr>Round</tr>
-           <tr>Winner</tr>
-       </thead>
-       <tbody>
-           <tr ng-repeat="round in game.Rounds">
-               <td>{{$index+1}}</td>
-               <td>{{round.Winner}}</td>
-           </tr>
-       </tbody>
-    </table>
-    
+    <div class="col-md-6" ng-show="game.Rounds.length > 0" class="table-responsive">
+        <h1>Score</h1>
+        <table class="table table-bordered">            
+            <thead>
+                <th>Round</th>
+                <th>Winner</th>
+            </thead>
+            <tbody>                
+                <tr ng-repeat="round in game.Rounds">
+                    <td>{{$index+1}}</td>
+                    <td>{{round.Winner}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>        
 </div>
