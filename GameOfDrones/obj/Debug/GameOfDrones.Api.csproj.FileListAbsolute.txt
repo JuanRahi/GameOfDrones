@@ -163,3 +163,5 @@ C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\GameOfDrones.
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\obj\Debug\GameOfDrones.Api.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\obj\Debug\GameOfDrones.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\obj\Debug\GameOfDrones.pdb
+C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\NLog.dll
+C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones\bin\NLog.xml

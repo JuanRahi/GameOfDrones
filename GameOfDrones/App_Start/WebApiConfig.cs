@@ -6,6 +6,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Cors;
+using GameOfDrones.Filters;
 
 namespace GameOfDrones
 {
@@ -17,6 +18,7 @@ namespace GameOfDrones
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+            config.Filters.Add(new LoggingFilterAttribute());
 
             var enableCorsAttribute = new EnableCorsAttribute("*",
                                                "Origin, Content-Type, Accept",
