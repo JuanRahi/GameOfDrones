@@ -18,7 +18,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
                 templateUrl: 'Views/Game/Play.html',
                 controller: 'GameCtrl'
             })
-            .when('/Winner', {
+            .when('/Winner/:winner', {
                 templateUrl: 'Views/Game/Winner.html',
                 controller: 'GameCtrl'
             })

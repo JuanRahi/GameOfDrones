@@ -29,10 +29,7 @@ namespace GameOfDrones.Controllers
 
             var result = controller.AddRound(game);
 
-            return Ok(new
-            {
-                keepPlaying = result
-            });
+            return Ok(result);
         }
 
     }

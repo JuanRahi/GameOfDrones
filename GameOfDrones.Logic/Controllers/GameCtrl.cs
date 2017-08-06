@@ -108,7 +108,7 @@ namespace GameOfDrones.Logic.Controllers
             return game.ID;
         }
 
-        public bool AddRound(FullGameDTO dto)
+        public GameResultDTO AddRound(FullGameDTO dto)
         {
 
             var winner = CompareHelper.Winner(dto.Player1, dto.Player2);
@@ -127,16 +127,18 @@ namespace GameOfDrones.Logic.Controllers
 
             bool keepPlaying = (score.Wins < 3);
 
+            string winnerName = (dto.Player1.ID == winner) ? dto.Player1.Name : dto.Player2.Name;
+
             if (!keepPlaying)
             {
                 var game = repGames.Get(x => x.ID == dto.ID);
                 game.EndDate = DateTime.Now;
-                repGames.Update(game);
+                repGames.Update(game);                 
             }
 
-            uow.SaveChanges();
+            uow.SaveChanges();            
 
-            return (keepPlaying); //
+            return new GameResultDTO(keepPlaying, winnerName); //
         }
 
     }

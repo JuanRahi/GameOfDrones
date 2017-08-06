@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DTO\FullGameDTO.cs" />
     <Compile Include="DTO\GameDTO.cs" />
+    <Compile Include="DTO\GameResultDTO.cs" />
     <Compile Include="DTO\PlayerDTO.cs" />
     <Compile Include="DTO\RoundDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
