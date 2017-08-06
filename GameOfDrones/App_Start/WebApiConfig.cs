@@ -19,6 +19,7 @@ namespace GameOfDrones
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
             config.Filters.Add(new LoggingFilterAttribute());
+            config.Filters.Add(new GlobalExceptionAttribute());
 
             var enableCorsAttribute = new EnableCorsAttribute("*",
                                                "Origin, Content-Type, Accept",

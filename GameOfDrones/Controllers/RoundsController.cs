@@ -28,7 +28,7 @@ namespace GameOfDrones.Controllers
             }
 
             var result = controller.AddRound(game);
-
+            
             return Ok(result);
         }
 
