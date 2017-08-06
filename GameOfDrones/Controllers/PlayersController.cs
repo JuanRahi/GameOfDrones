@@ -24,9 +24,9 @@ namespace GameOfDrones.Controllers
 
         // GET: api/Players/5
         [ResponseType(typeof(FullPlayerDTO))]
-        public IHttpActionResult GetPlayer(int id, int offset)
+        public IHttpActionResult GetPlayer(int id)
         {
-            var wins = controller.GetWins(id, offset);            
+            var wins = controller.GetWins(id);            
             return Ok(wins);
         }
 

@@ -49,13 +49,12 @@ namespace GameOfDrones.Logic.Controllers
             return dto;
         }
 
-        public FullPlayerDTO GetWins(int id, int offset)
+        public FullPlayerDTO GetWins(int id)
         {
             var player = repPlayers.Get(x => x.ID == id);
-
-            FullPlayerDTO dto = new FullPlayerDTO(player.Name);
+            var scores = repScores.GetAll(x => x.PlayerId == id && x.Wins == 3).ToList(); // .Skip(offset).Take(10)            
+            FullPlayerDTO dto = new FullPlayerDTO(player.Name, scores.Count);                                    
             var statistics = new List<StatisticDTO>();
-            var scores = repScores.GetAll(x => x.PlayerId == id && x.Wins == 3).Skip(offset).Take(10).ToList();
             foreach (var score in scores)
             {
                 var vsScore = (score.Game.Scores[0] == score) ? score.Game.Scores[1] : score.Game.Scores[0];

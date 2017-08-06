@@ -1,19 +1,22 @@
-﻿<div ng-init="init()">
-    <h1>{{player.Name}} Statistics</h1>
+﻿<a href="/Start" class="btn btn-primary">Back</a>
+<div ng-init="init()">
+    <h1>{{player.Name}} Wins</h1>
     <div ng-show="player.Statistics.length > 0" class="table-responsive">
         <table class="table table-bordered">
             <thead>
                 <th>Result</th>
-                <th>VS</th>
+                <th>Vs</th>
                 <th>Date</th>
             </thead>
             <tbody>
-                <tr ng-repeat="statistic in player.Statistics">
+                <tr dir-paginate="statistic in player.Statistics | itemsPerPage: 10">
                     <td>{{statistic.Result}}</td>
                     <td>{{statistic.Vs}}</td>
                     <td>{{statistic.Date}}</td>
                 </tr>
-            </tbody>
+            </tbody>                                        
         </table>
-    </div>        
+        <dir-pagination-controls></dir-pagination-controls>
+    <h4>Total wins {{player.Statistics.length}}</h4>      
+    </div>          
 </div>

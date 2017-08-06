@@ -81,6 +81,8 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Controllers\player.js" />
+    <Content Include="Scripts\dirPagination.js" />
+    <Content Include="Scripts\dirPagination.tpl.html" />
     <Content Include="Scripts\Factories\gameFactory.js" />
     <Content Include="Scripts\Factories\playerFactory.js" />
     <Content Include="Scripts\Factories\roundFactory.js" />
