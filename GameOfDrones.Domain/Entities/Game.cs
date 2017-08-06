@@ -11,11 +11,12 @@ namespace GameOfDrones.Domain.Entities
     {
         public Game()
         {
-            Date = DateTime.Now;           
+            StartDate = DateTime.Now;           
         }
 
         public int ID { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         public virtual List<Score> Scores { get; set; }
         public virtual List<Round> Rounds { get; set; }

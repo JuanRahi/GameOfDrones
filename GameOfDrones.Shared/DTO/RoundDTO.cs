@@ -8,9 +8,7 @@ namespace GameOfDrones.Shared.DTO
 {
     public class RoundDTO
     {
-        public int GameID { get; set; }
-        public PlayerDTO Player1 { get; set; }
-        public PlayerDTO Player2 { get; set; }
-        public int Rounds { get; set; }
+        public int Round { get; set; }
+        public string Winner { get; set; }
     }
 }

@@ -7,4 +7,3 @@ C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Shared\bin\Debug\
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Shared\bin\Debug\GameOfDrones.Shared.pdb
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Shared\obj\Debug\GameOfDrones.Shared.dll
 C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Shared\obj\Debug\GameOfDrones.Shared.pdb
-C:\Users\Juan\Documents\GameOfDrones\GameOfDrones\GameOfDrones.Shared\obj\Debug\GameOfDrones.Shared.csprojResolveAssemblyReference.cache

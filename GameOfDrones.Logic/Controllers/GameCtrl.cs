@@ -1,6 +1,7 @@
 ﻿using GameOfDrones.Domain.DAL;
 using GameOfDrones.Domain.Entities;
 using GameOfDrones.Shared.DTO;
+using GameOfDrones.Shared.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -34,7 +35,8 @@ namespace GameOfDrones.Logic.Controllers
             foreach (var game in games)
                 result.Add(new GameDTO {
                     ID = game.ID,
-                    Date = game.Date,
+                    StartDate = game.StartDate,
+                    EndDate = game.EndDate,
                     Player1 = game.Scores[0].Player.Name,
                     Player2 = game.Scores[1].Player.Name
                 });
@@ -47,7 +49,7 @@ namespace GameOfDrones.Logic.Controllers
             var game = repGames.Get(x => x.ID == id);
             GameDTO dto = new GameDTO
             {
-                Date = game.Date,
+                StartDate = game.StartDate,
                 Player1 = game.Scores[0].Player.Name,
                 Player2 = game.Scores[1].Player.Name
             };
@@ -65,11 +67,22 @@ namespace GameOfDrones.Logic.Controllers
             FullGameDTO dto = new FullGameDTO
             {
                 ID = game.ID,
+                EndDate = game.EndDate,
                 Player1 = new PlayerDTO { ID = game.Scores[0].Player.ID, Name = game.Scores[0].Player.Name },
                 Player2 = new PlayerDTO { ID = game.Scores[1].Player.ID, Name = game.Scores[1].Player.Name },
-                Rounds = game.Rounds.Count + 1
+                TotalRounds = game.Rounds.Count + 1,
             };
 
+            if(dto.TotalRounds > 1)
+            {
+                var dtoRounds = new List<RoundDTO>();
+                var rounds = game.Rounds.OrderBy(x => x.ID).ToList();
+                foreach (var round in rounds)
+                    dtoRounds.Add(new RoundDTO { Winner = round.Winner.Name });
+
+                dto.Rounds = dtoRounds;
+            }
+            
             return dto;
         }
 
@@ -98,7 +111,7 @@ namespace GameOfDrones.Logic.Controllers
         public bool AddRound(FullGameDTO dto)
         {
 
-            var winner = dto.Player1.ID; //TODO WINNER
+            var winner = CompareHelper.Winner(dto.Player1, dto.Player2);
 
             var round = new Round
             {
@@ -112,9 +125,18 @@ namespace GameOfDrones.Logic.Controllers
             score.Wins++;
             repScores.Update(score);
 
+            bool keepPlaying = (score.Wins < 3);
+
+            if (!keepPlaying)
+            {
+                var game = repGames.Get(x => x.ID == dto.ID);
+                game.EndDate = DateTime.Now;
+                repGames.Update(game);
+            }
+
             uow.SaveChanges();
 
-            return (score.Wins < 3); //Keep playing?
+            return (keepPlaying); //
         }
 
     }

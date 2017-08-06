@@ -11,6 +11,8 @@ namespace GameOfDrones.Shared.DTO
         public int ID { get; set; }
         public PlayerDTO Player1 { get; set; }
         public PlayerDTO Player2 { get; set; }
-        public int Rounds { get; set; }
+        public List<RoundDTO> Rounds { get; set; }
+        public int TotalRounds { get; set; }
+        public DateTime? EndDate { get; set; }
     }
 }
