@@ -138,7 +138,7 @@ namespace GameOfDrones.Logic.Controllers
 
             uow.SaveChanges();            
 
-            return new GameResultDTO(keepPlaying, winnerName); //
+            return new GameResultDTO(keepPlaying, winnerName, winner); //
         }
 
     }

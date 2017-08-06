@@ -1,7 +1,8 @@
 ﻿angular.module("game").controller('GameCtrl', ['$scope', '$location', '$routeParams', 'toastr', 'GamesFactory', 'RoundsFactory',
     function ($scope, $location, $routeParams, toastr, GamesFactory, RoundsFactory) {
 
-        $scope.winner = $routeParams.winner;
+        $scope.winnerId = $routeParams.winnerId;
+        $scope.winnerName = $routeParams.winnerName;
         
         $scope.init = function init() {
             GamesFactory.GetAll.go().$promise.then(function (dataGames) {
@@ -38,7 +39,7 @@
                         });
                     }
                     else
-                        $location.path("/Winner/" + result.Winner);
+                        $location.path("/Winner/" + result.WinnerId + "/" + result.Winner);
                 });            
             }
             else {

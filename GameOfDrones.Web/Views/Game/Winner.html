@@ -1,9 +1,10 @@
-﻿<div ng-init="winner()">
+﻿<div>
     <h1>
         We have a WINNER!!
     </h1>
     <h1>
-        {{winner}} is the new EMPEROR!   
+        {{winnerName}} is the new EMPEROR!   
     </h1>
     <a href="/Start" class="btn btn-primary">Play Again</a> 
+    <a href="/Player/{{winnerId}}?offset=0" class="btn btn-primary">See {{winnerName}} stats</a> 
 </div>

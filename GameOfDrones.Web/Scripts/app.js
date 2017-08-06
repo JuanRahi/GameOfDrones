@@ -1,4 +1,4 @@
-﻿var app = angular.module("game", ['ngRoute', 'ngResource', 'gameFactory', 'roundFactory', 'toastr']);
+﻿var app = angular.module("game", ['ngRoute', 'ngResource', 'toastr', 'gameFactory', 'roundFactory', 'playerFactory']);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider',
       function ($routeProvider, $locationProvider, $httpProvider) {
@@ -6,9 +6,9 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
         $httpProvider.defaults.useXDomain = true;
 
         $routeProvider
-            .when('/Move', {
-                templateUrl: 'Views/Game/Move.html',
-                controller: 'GameCtrl'
+            .when('/Player/:player', {
+                templateUrl: 'Views/Player/Statistics.html',
+                controller: 'PlayerCtrl'
             })
             .when('/Games', {
                 templateUrl: 'Views/Game/Index.html',
@@ -18,7 +18,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
                 templateUrl: 'Views/Game/Play.html',
                 controller: 'GameCtrl'
             })
-            .when('/Winner/:winner', {
+            .when('/Winner/:winnerId/:winnerName', {
                 templateUrl: 'Views/Game/Winner.html',
                 controller: 'GameCtrl'
             })

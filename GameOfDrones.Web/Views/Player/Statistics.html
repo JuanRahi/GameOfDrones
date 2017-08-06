@@ -1,0 +1,19 @@
+﻿<div ng-init="init()">
+    <h1>{{player.Name}} Statistics</h1>
+    <div ng-show="player.Statistics.length > 0" class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <th>Result</th>
+                <th>VS</th>
+                <th>Date</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="statistic in player.Statistics">
+                    <td>{{statistic.Result}}</td>
+                    <td>{{statistic.Vs}}</td>
+                    <td>{{statistic.Date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>        
+</div>
